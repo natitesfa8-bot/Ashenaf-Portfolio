@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://natitesfa8-bot.github.io/Ashenaf-Portfolio/sitemap.xml
