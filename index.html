@@ -97,6 +97,9 @@
 
       .hero {
         padding: 90px 0 72px;
+        background-image: linear-gradient(rgba(21, 128, 61, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(21, 128, 61, 0.045) 1px, transparent 1px);
+        background-size: 56px 56px;
       }
 
       .hero-inner {
@@ -122,6 +125,32 @@
         font-size: clamp(2.5rem, 5vw, 4.4rem);
         line-height: 1.05;
         margin: 18px 0 16px;
+      }
+
+      .hero h1::after {
+        content: "";
+        display: block;
+        width: 76px;
+        height: 5px;
+        margin-top: 22px;
+        border-radius: 3px;
+        background: linear-gradient(90deg, var(--primary), #a3e635);
+      }
+
+      @keyframes reveal-up {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-inner > div:first-child {
+        animation: reveal-up 0.7s ease-out both;
       }
 
       .hero p {
@@ -167,6 +196,13 @@
         border-radius: 24px;
         padding: 24px;
         box-shadow: 0 24px 60px var(--shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: reveal-up 0.7s 0.12s ease-out both;
+      }
+
+      .profile-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 32px 72px rgba(22, 163, 74, 0.24);
       }
 
       .profile-photo {
@@ -438,6 +474,17 @@
         .contact-box {
           flex-direction: column;
           align-items: flex-start;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-inner > div:first-child,
+        .profile-card {
+          animation: none;
+        }
+
+        .profile-card {
+          transition: none;
         }
       }
     </style>
