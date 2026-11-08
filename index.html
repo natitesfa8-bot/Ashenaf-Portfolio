@@ -335,7 +335,15 @@
 
       .project-image {
         height: 220px;
+        overflow: hidden;
         background: linear-gradient(135deg, #4ade80, #16a34a);
+      }
+
+      .project-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       .project-body {
@@ -624,7 +632,9 @@
           <h2 class="section-title">Selected Work</h2>
           <div class="projects">
             <article class="project-card">
-              <div class="project-image"></div>
+              <div class="project-image">
+                <img src="images/portfolio-preview.png" alt="Preview of my portfolio homepage" />
+              </div>
               <div class="project-body">
                 <h3>My First Project: Personal Portfolio</h3>
                 <p>My first web project is a responsive portfolio built to introduce my skills and give visitors a way to contact me.</p>
