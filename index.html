@@ -27,6 +27,9 @@
         --card-alt: #ecfdf5;
         --primary: #22c55e;
         --primary-dark: #15803d;
+        --heading: #143b2a;
+        --accent: #a9472a;
+        --accent-soft: #fff2eb;
         --text: #0f172a;
         --muted: #475569;
         --line: #d1fae5;
@@ -111,8 +114,8 @@
 
       .eyebrow {
         display: inline-block;
-        background: #dcfce7;
-        color: var(--primary-dark);
+        background: var(--accent-soft);
+        color: var(--accent);
         padding: 8px 14px;
         border-radius: 100px;
         font-size: 0.8rem;
@@ -125,6 +128,11 @@
         font-size: clamp(2.5rem, 5vw, 4.4rem);
         line-height: 1.05;
         margin: 18px 0 16px;
+        color: var(--heading);
+      }
+
+      .text-accent {
+        color: var(--accent);
       }
 
       .hero h1::after {
@@ -249,6 +257,7 @@
       .section-title {
         font-size: clamp(2rem, 3vw, 2.8rem);
         margin-bottom: 12px;
+        color: var(--heading);
       }
 
       .section-subtitle {
@@ -293,6 +302,7 @@
       .skill-box h3 {
         margin-top: 0;
         margin-bottom: 10px;
+        color: var(--heading);
       }
 
       .skill-box ul {
@@ -333,6 +343,7 @@
       .project-body h3 {
         margin-top: 0;
         margin-bottom: 10px;
+        color: var(--heading);
       }
 
       .project-body p {
@@ -507,7 +518,7 @@
         <div class="container hero-inner">
           <div>
             <span class="eyebrow">Web Developer</span>
-            <h1>Building modern digital experiences that convert ideas into results.</h1>
+            <h1>Building <span class="text-accent">modern digital experiences</span> that convert ideas into results.</h1>
             <p>
               I’m Ashenaf Tesfaye Yishak, a web developer focused on creating fast,
               user-friendly, and visually polished websites that help businesses and
